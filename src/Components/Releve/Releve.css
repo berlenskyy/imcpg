@@ -1,0 +1,66 @@
+
+.releve {
+  width: 700px; /* A4 */
+  margin: auto;
+  font-family: "Times New Roman";
+  font-size: 12pt;
+  color: black;
+  background-color: white;
+}
+hr{
+    font-weight: bold;
+    font-size: 200px;
+}
+.header {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nomEc{
+    font-size: 24px;
+    font-family: Helvetica, Arial , sans-serif;
+}
+
+.title {
+  text-decoration: underline;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.text {
+  text-align: justify;
+  margin: 23px 0;
+}
+
+.notes {
+  width: 70%;
+  border-collapse: collapse;
+  margin-left: 14% ;
+  margin-right: 14% ;
+}
+
+.notes td {
+  border: 1px solid black;
+  padding: 6px; 
+}
+
+.signature {
+  margin-top: 60px;
+  margin-right: 15px;
+  text-align: right;
+}
+.mat td:first-child,.tableBody td:first-child{
+    text-align: left;
+}
+.mat td {
+    font-weight: bold;
+    text-align: center;
+}
+.tableBody td{ 
+    text-align: center;
+}
+ .tot td, .moy td{
+    font-weight: bold;
+    text-align: center;
+}

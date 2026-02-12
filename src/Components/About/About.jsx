@@ -4,12 +4,12 @@ import about_img from '../../assets/about_img.png';
 import play_icon from '../../assets/play_icon.png';
 
 
-const About = () => {
+const About = ({setPlayState}) => {
   return (
     <div className='about'>
         <div className="about-left">
             <img src={about_img} alt="" className='about-img'/>
-            <img src={play_icon} alt="" className='play_icon'/>
+            <img src={play_icon} alt="" className='play_icon' onClick={()=>{ setPlayState(true)}}/>
         </div>
         <div className="about-right">
             <h3>À Propos De L’IMCPG</h3>
@@ -22,10 +22,12 @@ const About = () => {
             </p>
             <p>
                 Nous mettons l’accent sur :
-                    • L’innovation pédagogique
-                    • L’apprentissage actif et pratique
-                    • Un accompagnement personnalisé
-                    • Un environnement sain et sécurisé
+                <ul>
+                    <li>L’innovation pédagogique</li>
+                    <li>L’apprentissage actif et pratique</li>
+                    <li>Un accompagnement personnalisé</li>
+                    <li>Un environnement sain et sécurisé</li>
+                </ul>
 
                 Nous guidons les élèves pour qu’ils deviennent curieux, confiants, 
                 autonomes et prêts à relever les défis futurs – que ce soit en 

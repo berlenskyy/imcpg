@@ -1,9 +1,12 @@
 import React from 'react'
 import './Footer.css'
 const Footer = () => {
-  return (
+ const year = new Date().getFullYear();
+
+  return ( 
+  
     <div className='footer'>
-        <p> 2025 IMCPG. Tous droits reserves.</p>
+        <p>&copy; {year} IMCPG - Tous droits réservés.</p>
         <ul>
             <li>Terms of service</li>
             <li>Privacy Policy</li>

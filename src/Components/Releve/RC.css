@@ -1,0 +1,10 @@
+.viewReleve{
+    width: 100%;
+    position: absolute;
+    top: 5px; 
+    background-color: rgba(0, 0, 0, 0.811);
+}
+.hideReleve{
+    display: none;
+    
+}

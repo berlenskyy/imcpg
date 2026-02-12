@@ -1,0 +1,122 @@
+
+
+
+.admin-container{
+  /* position: fixed; */
+  /* top: 0; */
+  background-color: gray;
+  display: flex;
+  /* align-items:baseline; */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+ .admin-container img{
+  color: blue;
+  margin: 0;
+  padding: 0;
+
+}
+.admin-container .top{
+  
+}
+.sidebar{
+  flex: 1;
+  min-height: 100vh;
+  background-color: rgba(20, 19, 19, 0.792);
+  color: white;
+  border-right: 0.5px solid rgb(231, 230, 230);
+
+}
+.sidebar .top{
+  height: 50px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+hr{
+  height: 0;
+  border: 0.5px solid rgb(228, 228, 228);
+}
+
+.center{
+  margin-top: 15px;
+}
+.center ul{
+  list-style-type: none;
+  padding: 0;
+}
+.center li{
+  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell;
+  font-weight: 600;
+  font-size: 13px;
+  width: 100%;
+  padding: 8px 30px 6px 30px;
+  cursor:pointer;
+  text-transform: capitalize;
+  
+
+}
+.center li:hover{
+    background-color: rgba(20, 19, 19, 0.507);
+
+
+}
+
+
+.main{
+  flex: 8;
+}
+.main .defaultMessage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 40px;
+  font-weight: 900;
+}
+.main .header {
+  width: 100%;
+  background-color: rgba(20, 19, 19, 0.792);
+  color: #eee; 
+  padding: 7px;
+  top: 0;
+  height: 50px;
+
+}
+
+
+.main .header-left{
+  justify-content: center;
+
+}
+.main .header-left .search{
+  padding: 3px;
+  border: 0.5px solid lightgray;
+  border-radius: 5px;
+  background-color: rgba(128, 128, 128, 0.885);
+
+
+}
+.main 
+.left 
+.search::placeholder{
+                    font-size: 13px;
+                }
+.main .header-left .search input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+}
+.body{
+  position: absolute;
+  width: 89%;
+  height: 80%;
+  overflow-y: scroll;
+}

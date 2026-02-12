@@ -1,4 +1,5 @@
 .footer{
+    width: 80%;
     margin: 10px auto;
     display: flex;
     align-items: center;
@@ -6,10 +7,25 @@
     border-top: 1px solid #797979;
     padding: 15px 0;
 
+
 }
 .footer ul li{
     list-style: none;
     display: inline-block;
     margin-right: 20px;
 
+}
+
+/* ----------media queries------------- */
+@media (max-width: 600px){
+    .footer{
+        display: block;
+        text-align: center;
+    }
+    .footer ul li{
+        margin: 10px;
+    }
+    .footer ul{
+        margin-top: 10px;
+    }
 }
