@@ -11,15 +11,16 @@ hr{
     font-weight: bold;
     font-size: 200px;
 }
-.header {
+.releve .headerWrapper {
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
 }
 .nomEc{
     font-size: 24px;
     font-family: Helvetica, Arial , sans-serif;
+    color: black;
 }
 
 .title {

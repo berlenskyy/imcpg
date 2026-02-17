@@ -1,29 +1,28 @@
-import React, { useState } from 'react'
-import './AdminPanel.css'
-import admin3 from './../../assets/admin-32.png'
-import { Link as RouterLink } from 'react-router-dom'
-import ReleveController from './../Releve/ReleveController.jsx'
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-const  AdminPanel = () => {
-  const [body, setBody] = useState('')
-  const handleClickWebsite =() =>{
-    setBody('')
-    console.log('Website');
-  }
-  const handleClickEcole =() =>{
-    setBody('')
-    console.log('école');
-
-  }
-  const handleClickReleve = () =>{
-    setBody('ReleveController')
-  
-
-  }
+import React, { useState } from "react";
+import "./AdminPanel.css";
+import admin3 from "./../../assets/admin-32.png";
+import { Link as RouterLink } from "react-router-dom";
+import ReleveController from "./../Releve/ReleveController.jsx";
+import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
+const AdminPanel = () => {
+  const [body, setBody] = useState("");
+  const handleClickWebsite = () => {
+    setBody("");
+    console.log("Website");
+  };
+  const handleClickEcole = () => {
+    setBody("");
+    console.log("école");
+  };
+  const handleClickReleve = () => {
+    setBody("ReleveController");
+  };
   return (
     <div className="admin-container">
       <div className="sidebar">
-        <div className="top"><span>Portail IMCPG</span></div>
+        <div className="top">
+          <span>Portail IMCPG</span>
+        </div>
         <hr />
         <div className="center">
           <ul>
@@ -45,18 +44,26 @@ const  AdminPanel = () => {
       <div className="main">
         <div className="header">
           <div className="header-left">
-            <div className="search"><input type="search" name="" id="" placeholder='rechercher'/></div>
+            <div className="search">
+              <input type="search" name="" id="" placeholder="rechercher" />
+            </div>
           </div>
           <div className="header-right">
-            <RouterLink to='/'><CloseOutlinedIcon className='close-icon'/></RouterLink>
+            <RouterLink to="/">
+              <CloseOutlinedIcon className="close-icon" />
+            </RouterLink>
           </div>
         </div>
         <div className="body">
-          {body ==='ReleveController'? <ReleveController/>: <p className='defaultMessage'>En Cours d'implementation . . .</p>}
+          {body === "ReleveController" ? (
+            <ReleveController />
+          ) : (
+            <p className="defaultMessage">En Cours d'implementation . . .</p>
+          )}
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminPanel
+export default AdminPanel;

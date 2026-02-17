@@ -4,17 +4,19 @@ import './Releve.css'
 const ReleveHTML = ({data}) => {
     const infoImcpg = {
         'nomEcole' : 'Institution Mixte Cérélus Pierre Glaude',
-        'email':'imcpg.edu@gmail.com'
+        'email':'imcpg.edu@gmail.com',
+        'adresse1':'118, Boulevard Jean Jacques Dessalines',
+        'adresse2':'Verrettes, Dpt Artibonite'
     }
 
   return (
     <div className="releve" id='releve-pdf'>
-        <div className="header">
+        <div className="headerWrapper">
             <img src={logo1} alt="" className='logo'/>
             <div>
                 <p className='nomEc'><strong>{infoImcpg.nomEcole}</strong></p>
-                <p>118, Boulevard Jean Jacques Dessalines</p>
-                <p>Verrettes, Dpt Artibonite</p>
+                <p>{infoImcpg.adresse1}</p>
+                <p>{infoImcpg.adresse2}</p>
                 <p>E-mail : {infoImcpg.email}</p>
             </div>
             <img src={logo1} alt="" className='logo'/>
@@ -24,10 +26,10 @@ const ReleveHTML = ({data}) => {
         <h2 className="title">RELEVÉ DES NOTES</h2>
 
         <p className="text">
-          L’Institution Mixte Cérélus Pierre Glaude atteste et certifie par la présente
-        que l’élève <strong>{data.student.firstname} {data.student.lastname}</strong> en classe de{" "}
-        <strong>{data.student.class}</strong> a obtenu les notes suivantes pour
-        l’année scolaire <strong>{data.student.year}</strong>.
+            L’Institution Mixte Cérélus Pierre Glaude atteste et certifie par la présente
+            que l’élève <strong>{data.student.firstname} {data.student.lastname}</strong> en classe de{" "}
+            <strong>{data.student.level}</strong> a obtenu les notes suivantes pour
+            l’année scolaire <strong>{data.student.year}</strong>.
         </p>
 
         <table className="notes">
@@ -51,7 +53,7 @@ const ReleveHTML = ({data}) => {
             </tr>
             <tr className='moy'>
                 <td>Moyenne</td>
-                <td>{data.subjects.reduce((acc, m) => acc + parseInt(m.grade), 0) * 10 / data.subjects.reduce((acc, m) => acc + parseInt(m.coefficient), 0) }</td>
+                <td>{data.average}</td>
                 <td>{data.subjects.reduce((acc, m) => acc + parseInt(m.coefficient), 0) * 10 / data.subjects.reduce((acc, m) => acc + parseInt(m.coefficient), 0)}</td>
             </tr>
         </tbody>

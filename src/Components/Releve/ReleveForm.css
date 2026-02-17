@@ -1,9 +1,29 @@
+.disappeared{
+    display: none;
+}
 .dForm{ 
     max-width: 100%;  
     margin: auto;
     Padding: 20px; 
     background: white;  
     box-Shadow: 0 0 10px rgba(0,0,0,0.1); 
+}
+form{
+    /* position: relative; */
+}
+.btValider{
+    /* position: absolute; */
+    /* right: 1%; */
+    margin-left: 94%;
+    align-items: end;
+    margin-bottom: 5px;
+    outline: none;
+    border: 1px solid #007bff;
+    color:#007bff;
+    border-radius: 5px;
+    background-color: white;
+    box-Shadow: 0px 2px 0px 1px  rgba(0,0,0,0.1); 
+    cursor: pointer;
 }
 h1
  { 
@@ -51,11 +71,9 @@ input.error{
     flex: 1;
     height: 10px;
 }
-.fEl  .classe, 
-.fEl .annee{
-    
-    
-    
+.fEl  .classe{
+    width: 105px;
+
 }
 form .classe, form .annee{ 
     width: 125px;
@@ -111,9 +129,25 @@ table tbody tr td:nth-child(3) input{
     margin:  auto; 
  }
 table tbody tr td:nth-child(4) button{
-    width: 80px;
-    margin:  auto; 
+    padding: 2px 1px;
  }
+tr .modBtn,
+tr .delBtn{
+    padding: 2px 3px;
+    border-radius: 5px;
+}
+tr .modBtn{
+    margin: 0 5px 0;
+    color: #28a745;
+    border: 1px solid green;
+    background-color: rgba(0, 128, 0, 0.296);
+
+}
+tr .delBtn{
+    color: red;
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.285);
+}
 .ajout{ 
     margin: 10px 0; 
     padding: 10px; 
@@ -130,7 +164,8 @@ table tbody tr td:nth-child(4) button{
     border: none; 
     border-Radius: 4px ;
 }
-.moyText{ 
+p .moyText{ 
+    display: block;
     font-weight: bold;
     color: #28a745;
 }
