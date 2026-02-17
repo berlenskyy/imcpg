@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import html2pdf from "html2pdf.js";
 import "./ReleveForm.css"; 
-import { useForm , useFieldArray} from "react-hook-form";
+import { useForm , useFieldArray, set} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";  
 import { get } from "react-scroll/modules/mixins/scroller";
@@ -133,16 +133,17 @@ const {fields, append, remove} = useFieldArray({
 
 //***********Handle submit variable************ */
 const onSubmit = (data) => {
-  setStudent(
-    {
-      firstname: data.firstname, 
-      lastname: data.lastname, 
-      year: data.year, 
-      level: data.level 
-    });
+  const newStudent = {
+    firstname: data.firstname, 
+    lastname: data.lastname, 
+    year: data.year, 
+    level: data.level 
+  }; 
+  setStudent(newStudent);
+
   setVisibility(true);
   setSubjects(data.subjects);
-  submittedData({ student, subjects, average });
+  submittedData({ student: newStudent, subjects: data.subjects, average });
   visibilit(visibility);
 };
 
