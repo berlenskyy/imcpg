@@ -1,0 +1,130 @@
+.page {
+  width: 700px;
+  margin: auto;
+  font-family: "Times New Roman", serif;
+  font-size: 12px;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 15px;
+}
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.headerWrapper p { 
+  text-align: center;
+  color: black;
+}
+hr{
+  border: 1px solid #1972ee;
+}
+
+
+
+
+
+
+
+
+.nomEc {
+  /* font-family: cursive; */
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.cp {
+  font-family: cursive;
+  font-size: 12px; 
+}
+
+.name { 
+  font-size: 12px;
+  /* text-shadow: 2px 2px 4px rgba(0,0,0,0.5); */
+  /* border: 2px solid black; */
+  /* border-radius: 10px; */
+  padding: 5px;
+  /* display: inline-block; */
+  /* background: linear-gradient(45deg, #f0f0f0, #ffffff); */
+}
+
+.title {
+  text-transform: capitalize;
+  text-align: center;
+  margin: 0px 0;
+}
+
+.infos {
+  text-align: center;
+  font-weight: bold;
+   margin-bottom: 3px;
+}
+
+.discipline {
+  display: flex;
+  justify-content: space-around;
+  margin: 3px 0;
+  line-height: 1.8;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-top: 15px;
+  text-align: center;
+}
+
+.direction {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.grades-table {
+  width: 70%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+.grades-table th, .grades-table td {
+  border: 1px solid #1972ee;
+  padding: 4px;
+  text-align: left;
+}
+
+.grades-table th {
+  background-color: #1972ee;
+  font-weight: bold;
+}
+
+.code {
+  margin: 10px auto ;  
+}
+.codeTitle{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 10px;
+
+}
+.codeWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  
+}
+.codeWidget{
+  width: 30%;
+  text-align: left;
+  margin: 2px;
+}
+.codeWidget span{
+  font-weight: bold;
+  margin-right: 5px;
+}
+.periode {
+  page-break-after: always;
+}
