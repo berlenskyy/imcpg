@@ -126,5 +126,5 @@ hr{
   margin-right: 5px;
 }
 .periode {
-  page-break-after: always;
+  /* page-break-after: always; */
 }

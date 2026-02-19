@@ -24,7 +24,7 @@ const ReleveController = () => {
               Retour
             </button>
             <button 
-              onClick={() => GeneratePDF(data)}
+              onClick={() => GeneratePDF(data, "releve-pdf")}
               className="downloadBtn"
             >
                 Générer PDF

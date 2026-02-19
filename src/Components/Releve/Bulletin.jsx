@@ -1,38 +1,45 @@
 import "./Releve.css";
 import "./Bulletin.css";
 import logo1 from "./../../assets/logo.png";
+import {school} from './../../dataSource.jsx'
 
-const Periode = ({ numero }) => (
-  <div className="periode">
+const DocHeader =({school})=>
+  <>
     <div className="headerWrapper">
       <img src={logo1} alt="" className="logo" />
       <div>
-        <p className="nomEc">INSTITUTION MIXTE CERELUS PIERRE GLAUDE</p>
-        <p className="ssection">SECTION FONDAMENTALE</p>
+        <p className="nomEc">{school.name}</p>
+        <p className="ssection">{'Section '}{school.section[2]}</p>
         <p className="aaddress">
-          118, BOULEVARD JEAN JACQUES DESSALINES, VERRETTES, HAÏTI, (W.I)
+          {school.adress.no+', '+school.adress.street+', '+school.adress.city+', '+school.adress.country}
         </p>
         <p className="ccity"></p>
         <p className="ddept">DÉPARTEMENT DE L’ARTIBONITE</p>
-        <p className="eemail">COURRIEL : imcpg.edu@gmail.com</p>
+        <p className="eemail">COURRIEL : {school.email}</p>
       </div>
       <img src={logo1} alt="" className="logo" />
     </div>
     <hr />
+  </>
+
+
+const Periode = ({ numero, student }) => (
+  <div className="periode"> 
+    <DocHeader school={school}/>
     <div className="infos">
-      <p className="cp">CP</p>
-      <p>2024 - 2025</p>
+      <p className="cp">{student.class}</p>
+      <p>{student.year}</p>
     </div>
 
     <h2 className="title">
-      Bulletin de la 1<sup>ère</sup> période
+      Bulletin de la {numero}<sup>{numero === 1 ? 'ère' : 'ème'}</sup> période
     </h2>
 
     <p className="name">
-      <strong>PRÉNOM :</strong> Mykendher
+      <strong>PRÉNOM :</strong> {student.firstname}
     </p>
     <p className="name">
-      <strong>NOM :</strong> SILVAIN
+      <strong>NOM :</strong> {student.lastname}
     </p>
 
     <table className="grades-table">
@@ -130,6 +137,7 @@ const Periode = ({ numero }) => (
       <p>___________________________</p>
       <p>VISA DE LA DIRECTION</p>
     </div>
+    <CodeAppreciation/>
   </div>
 );
 
@@ -159,16 +167,12 @@ const CodeAppreciation = () => (
   </div>
 );
 
-const BulletinCP = () => {
+const BulletinCP = ({student}) => {
+  
   return (
     <div className="page">
-      <Periode numero={1} />
-      {/* <Periode numero={2} student={student} />
-      <Periode numero={3} student={student} /> */}
-
-      <CodeAppreciation />
-      {/* <CodeAppreciation />
-      <CodeAppreciation /> */}
+      <Periode numero={1} student={student} />
+      {/* <CodeAppreciation /> */}
     </div>
   );
 };

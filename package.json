@@ -18,6 +18,8 @@
     "@mui/icons-material": "^7.3.8",
     "@mui/material": "^7.3.8",
     "@react-pdf/renderer": "^4.3.2",
+    "file-saver": "^2.0.5",
+    "html-docx-js": "^0.1.0",
     "html2pdf.js": "^0.14.0",
     "react": "^19.2.3",
     "react-circular-progressbar": "^2.2.0",

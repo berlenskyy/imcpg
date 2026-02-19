@@ -1,10 +1,8 @@
 import React from 'react'
 import html2pdf from "html2pdf.js";
 
-export const GeneratePDF = (data) => {
-  const element = document.getElementById("releve-pdf");
-  console.log(data);
-  console.log(element);
+export const GeneratePDF = (data, elementId) => {
+  const element = document.getElementById(elementId); 
   html2pdf()
     .set({
       margin: 8,

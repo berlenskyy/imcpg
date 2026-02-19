@@ -5,19 +5,21 @@ import { Link as RouterLink } from "react-router-dom";
 import ReleveController from "./../Releve/ReleveController.jsx"; 
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import BulletinCP from "../Releve/Bulletin.jsx";
+import StudentsList from "../Students/ListStudents.jsx";
 const AdminPanel = () => {
   const [body, setBody] = useState("");
   const handleClickWebsite = () => {
-    setBody("");
-    console.log("Website");
+    setBody(""); 
   };
   const handleClickEcole = () => {
-    setBody("BulletinCP");
-    console.log("école");
+    setBody("BulletinCP"); 
   };
   const handleClickReleve = () => {
     setBody("ReleveController");
   };
+  const handleClickStudents = () => { 
+    setBody("StudentsList");
+  }
   return (
     <div className="admin-container">
       <div className="sidebar">
@@ -31,7 +33,7 @@ const AdminPanel = () => {
             <li onClick={handleClickEcole}>Direction</li>
             <li onClick={handleClickReleve}>Relevé(s)</li>
             <li onClick={handleClickWebsite}>Professeur</li>
-            <li onClick={handleClickWebsite}>Élèves</li>
+            <li onClick={handleClickStudents}>Élèves</li>
             <li onClick={handleClickWebsite}>Parents</li>
             <li onClick={handleClickWebsite}>Matières</li>
             <li onClick={handleClickWebsite}>Classe</li>
@@ -63,6 +65,8 @@ const AdminPanel = () => {
                   return <ReleveController />;
                 case "BulletinCP":
                   return <BulletinCP />;
+                case "StudentsList":
+                  return <StudentsList />;
                 default:
                   return <p className="defaultMessage">En Cours d'implementation . . .</p>;
               }
