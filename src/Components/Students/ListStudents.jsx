@@ -22,7 +22,7 @@ const ListStudents = () => {
   
   const Show = ({student}) => {
     return (
-      <> {console.log("Show component received student:", student)}
+      <> 
         <div className="show">
           <div className="showHeader">
             <h2>
@@ -86,7 +86,7 @@ const ListStudents = () => {
       </div>
       {/* Modal pour afficher le bulletin */}
       {selectedStudent && 
-      <div className={`bulletinModal ${open ? "open" : "close"}`}>{console.log("Selected student in modal:", selectedStudent)}
+      <div className={`bulletinModal ${open ? "open" : "close"}`}>
         <Show student={selectedStudent} className="bulletinContent" />
       </div>}
     </div>

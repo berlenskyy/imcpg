@@ -1,7 +1,7 @@
 import "./Releve.css";
 import "./Bulletin.css";
 import logo1 from "./../../assets/logo.png";
-import {school} from './../../dataSource.jsx'
+import {school, results} from './../../dataSource.jsx'
 
 const DocHeader =({school})=>
   <>
@@ -44,73 +44,32 @@ const Periode = ({ numero, student }) => (
 
     <table className="grades-table">
       <thead>
-        <tr>
+        <tr className="mat">
           <th>Matières</th>
           <th>Note</th>
           <th>Maximum</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Français</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Mathématiques</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Questionner le monde</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Éducation musicale</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Éducation physique</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Arts visuels</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Langue vivante</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Enseignement moral et civique</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Histoire-Géographie</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Sciences et technologie</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>900</td>
-          <td>1000</td>
-        </tr>
-        <tr>
-          <td>Moyenne</td>
-          <td>9</td>
-          <td>10</td>
-        </tr>
+      { 
+        results[student.id-1].matieres.map((matiere, index) =>(
+          <tr key={index} className="tableBody">
+            <td>{matiere.name}</td>
+            <td>{matiere.score}</td>
+            <td>{matiere.coefficient}</td>
+          </tr>
+        ))
+      }
+      <tr className="tot">
+        <td>Total</td>
+        <td>{results[student.id-0].matieres.reduce((acc, matiere)=> acc+parseInt(matiere.score),0)}</td>
+        <td>{results[student.id-0].matieres.reduce((acc, matiere)=> acc+parseInt(matiere.coefficient),0)}</td>
+      </tr>
+      <tr className="moy">
+        <td>Moyenne</td>
+        <td>{results[student.id-0].matieres.reduce((acc, matiere)=> acc+parseInt(matiere.score),0) * 10 / results[student.id-0].matieres.reduce((acc, matiere)=> acc+parseInt(matiere.coefficient),0)}</td>
+        <td>{results[student.id-0].matieres.reduce((acc, matiere)=> acc+parseInt(matiere.coefficient),0) *10/ results[student.id-0].matieres.reduce((acc, matiere)=> acc+parseInt(matiere.coefficient),0) }</td>
+      </tr>
       </tbody>
     </table>
 
@@ -171,7 +130,7 @@ const BulletinCP = ({student}) => {
   
   return (
     <div className="page">
-      <Periode numero={1} student={student} />
+      <Periode numero={1} student={student} /> 
       {/* <CodeAppreciation /> */}
     </div>
   );

@@ -125,6 +125,21 @@ hr{
   font-weight: bold;
   margin-right: 5px;
 }
+.mat th:first-child,.tableBody td:first-child{
+    text-align: left;
+}
+.mat th {
+    font-weight: bold;
+    text-align: center;
+}
+.tableBody td{ 
+    text-align: center;
+}
+ .tot td, .moy td{
+    font-weight: bold;
+    text-align: center;
+}
 .periode {
-  /* page-break-after: always; */
+  page-break-after: always; 
+
 }

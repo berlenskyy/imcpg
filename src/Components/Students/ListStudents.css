@@ -1,8 +1,37 @@
-.listStudents { 
-    /* position: relative; */
+.listStudentsContainer { 
+    margin: 10px;
+    padding: 10px;
+    background-color: gray;
+    box-shadow: 0.5px 0.5px 4px 0.5px  white;
 }
+.listStudentsContainer .listHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 2px;
+    box-shadow: 0px 02px 0.5px 0px  white;
 
-
+}
+.listStudentsContainer
+.listHeader
+h2{
+    color: gray;
+    text-shadow: 2px 2px 3.5px  whitesmoke;
+}
+.listStudentsContainer button{
+    margin: 6px 5px;
+    padding: 3px 4px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid gray;
+    background-color: rgb(128, 128, 128);
+    color: whitesmoke;
+    box-shadow: 1.5px 2px 3px whitesmoke;
+}
+.listStudentsContainer button:hover{
+    
+}
 .bulletinModal.open{
     /* overflow-y: scroll; */
     /* width: 100%; */
@@ -61,4 +90,17 @@
     position: absolute;
     top: 22px;
     left: 60px;
+}
+.studentsTable{
+    text-align: center;
+    border-top-left-radius: 10px;
+}
+.studentsTable  td,
+.studentsTable th {
+    padding: 2px;
+    border: 1px solid gray; 
+    background-color: rgba(240, 248, 255, 0.17);
+}
+.studentsTable td{
+    color: aliceblue;
 }
