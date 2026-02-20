@@ -87,3 +87,9 @@ export const subjects =[
     {nom: 'Condensateur', grade: null, coefficient: null},
 
 ]
+
+export const radialBarChartDATA = [
+    {name: 'Boys', x: 1234, fill: "green"},
+    {name: 'Girls', x: 1134, fill: "yellow"},
+
+]

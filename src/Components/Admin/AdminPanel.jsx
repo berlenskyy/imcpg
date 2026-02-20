@@ -6,13 +6,14 @@ import ReleveController from "./../Releve/ReleveController.jsx";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import BulletinCP from "../Releve/Bulletin.jsx";
 import StudentsList from "../Students/ListStudents.jsx";
+import DashboardHome from "../DHome/Home.jsx";
 const AdminPanel = () => {
-  const [body, setBody] = useState("");
+  const [body, setBody] = useState("DashboardHome");
   const handleClickWebsite = () => {
-    setBody(""); 
+    setBody("NotReady"); 
   };
-  const handleClickEcole = () => {
-    setBody("BulletinCP"); 
+  const handleClickHome = () => {
+    setBody("DashboardHome"); 
   };
   const handleClickReleve = () => {
     setBody("ReleveController");
@@ -29,11 +30,11 @@ const AdminPanel = () => {
         <hr />
         <div className="center">
           <ul>
-            <li onClick={handleClickWebsite}>accueil</li>
-            <li onClick={handleClickEcole}>Direction</li>
+            <li onClick={handleClickHome}>accueil</li>
+            <li onClick={handleClickWebsite}>Direction</li>
             <li onClick={handleClickReleve}>Relevé(s)</li>
-            <li onClick={handleClickWebsite}>Professeur</li>
             <li onClick={handleClickStudents}>Élèves</li>
+            <li onClick={handleClickWebsite}>Professeur</li>
             <li onClick={handleClickWebsite}>Parents</li>
             <li onClick={handleClickWebsite}>Matières</li>
             <li onClick={handleClickWebsite}>Classe</li>
@@ -61,14 +62,18 @@ const AdminPanel = () => {
           {
             (() => {
               switch (body) {
+                case "DashboardHome":
+                  return <DashboardHome/>
                 case "ReleveController":
                   return <ReleveController />;
                 case "BulletinCP":
                   return <BulletinCP />;
                 case "StudentsList":
                   return <StudentsList />;
+                case "NotReady":
+                  return  <p className="defaultMessage">En Cours d'implementation . . .</p>;
                 default:
-                  return <p className="defaultMessage">En Cours d'implementation . . .</p>;
+                  return <DashboardHome/>;
               }
             })()
           }

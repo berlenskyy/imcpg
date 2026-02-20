@@ -63,7 +63,8 @@ hr{
 
 }
 .center li:hover{
-    background-color: rgba(20, 19, 19, 0.507);
+    /* background-color: rgba(20, 19, 19, 0.507); */
+    background-color: gray;
 
 
 }

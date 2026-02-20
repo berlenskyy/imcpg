@@ -28,9 +28,12 @@ h2{
     background-color: rgb(128, 128, 128);
     color: whitesmoke;
     box-shadow: 1.5px 2px 3px whitesmoke;
+    transition: background-color 1s ease, box-shadow 1s ease, padding 1s ease-in-out ;
 }
 .listStudentsContainer button:hover{
-    
+    background-color: rgba(128, 128, 128, 0.537);
+    box-shadow: 1.5px 2px 3px  rgba(0, 0, 0, 0.537);
+    padding: 3.5px 4.5px;
 }
 .bulletinModal.open{
     /* overflow-y: scroll; */
