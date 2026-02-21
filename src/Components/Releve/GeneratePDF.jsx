@@ -2,6 +2,7 @@ import React from 'react'
 import html2pdf from "html2pdf.js";
 
 export const GeneratePDF = (data, elementId) => {
+  console.log("receipt:", data.student.firstname)
   const element = document.getElementById(elementId); 
   html2pdf()
     .set({

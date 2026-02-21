@@ -24,7 +24,7 @@ const DocHeader =({school})=>
 
 
 const Periode = ({ numero, student }) => (
-  <div className="periode"> 
+  <div id ="page" className="periode"> 
     <DocHeader school={school}/>
     <div className="infos">
       <p className="cp">{student.class}</p>
@@ -79,8 +79,17 @@ const Periode = ({ numero, student }) => (
       <p>Discipline ( )</p>
       <p>Soin ( )</p>
     </div>
+    <div className="nearBottom">
+      <Signatures/>
+      <CodeAppreciation/>
+    </div>
 
-    <div className="signatures">
+    
+  </div>
+);
+const Signatures =()=>
+  <>
+      <div className="signatures">
       <div>
         <p>________________________</p>
         <p>VISA DU TITULAIRE</p>
@@ -96,10 +105,7 @@ const Periode = ({ numero, student }) => (
       <p>___________________________</p>
       <p>VISA DE LA DIRECTION</p>
     </div>
-    <CodeAppreciation/>
-  </div>
-);
-
+  </>
 const CodeAppreciation = () => (
   <div className="code">
     <p className="codeTitle">CODE D’APPRÉCIATION</p>
@@ -129,9 +135,8 @@ const CodeAppreciation = () => (
 const BulletinCP = ({student}) => {
   
   return (
-    <div className="page">
-      <Periode numero={1} student={student} /> 
-      {/* <CodeAppreciation /> */}
+    <div  className="page">
+      <Periode numero={1} student={student} />  
     </div>
   );
 };

@@ -101,6 +101,11 @@ hr{
 
 .code {
   margin: 10px auto ;  
+  
+}
+.nearBottom{
+  position: absolute;
+  bottom: 10px;
 }
 .codeTitle{
   text-align: center;

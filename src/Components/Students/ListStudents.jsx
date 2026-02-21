@@ -4,6 +4,7 @@ import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import BulletinCP from "../Releve/Bulletin"; 
 import { useState } from "react";
+import { GeneratePDF } from "../Releve/GeneratePDF";
 
 const ListStudents = () => {
     
@@ -32,7 +33,8 @@ const ListStudents = () => {
             <FileDownloadIcon
               className="downloadIcon"
               onClick={() =>
-                console.log("Download clicked for student:", student)
+                GeneratePDF({student}, 'page')
+                
               }
             />
           </div>
