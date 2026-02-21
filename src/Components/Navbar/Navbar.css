@@ -11,10 +11,16 @@ align-items: center;
 justify-content: space-between;
 z-index: 10;
 }
-
+img.logo{
+    width: 50px;
+}
 .logo{
-   width: 100px; 
+   /* width: 100px;  */
    border-radius: 0px 67px;
+}
+.homeLogo{
+    border-radius: 50%;
+    border: 5px dotted orange;
 }
 nav ul li{
     display: inline-block;
@@ -53,7 +59,7 @@ nav ul li{
 
 @media (max-width: 936px){
     nav{
-        padding: 15px 0;
+        padding: 15px 0; 
     }
     nav ul{
         position: fixed;
@@ -68,8 +74,15 @@ nav ul li{
     }
     nav ul{
         display: block;
-        margin: 0px 0px;
+        margin: 0;
 
+    }
+    nav ul li{
+        width: 100%;
+        padding: 3px 3px 2px 10px;
+    }
+    nav ul li:hover{
+        background-color: rgba(255, 255, 255, 0.153);
     }
     .menu-icon{
         display: block;

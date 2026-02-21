@@ -102,8 +102,8 @@ const MyRadialChart = () =>
                 <span>. . .</span>
             </div>
             <RadialBarChart 
-                // width={300}
-                // height={300}
+                width={300}
+                height={300}
                 data={radialBarChartDATA}
                 cx="50%"
                 cy="50%"

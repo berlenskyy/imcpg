@@ -66,6 +66,9 @@
     margin-right: 5px;
     box-shadow: 0.5px 1px 6px 1px whitesmoke;
 }
+.line2 .radial{
+    max-width: 350px;
+}
 .radial .cardTop{
     color: whitesmoke;
     outline: none;

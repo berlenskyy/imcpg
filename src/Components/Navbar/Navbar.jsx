@@ -5,12 +5,13 @@ import menu_icon from './../../assets/menu_icon.png'
 import admin32 from './../../assets/admin-32.png'
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom'
+import MenuIcon from '@mui/icons-material/Menu'
 
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   useEffect(()=>{
     window.addEventListener('scroll', ()=>{
-      window.scrollY > 500 ? setSticky(true) : setSticky(false);
+      window.scrollY > 5 ? setSticky(true) : setSticky(false);
     })
   },[])
 
@@ -20,7 +21,7 @@ const Navbar = () => {
   }
   return (
     <nav className={`container ${sticky? 'dark-nav' : ''}`}>
-        <img src={logo} alt="" className='logo'/>
+        <img src={logo} alt="" className='logo homeLogo'/>
         <ul className={mobileMenu? '': 'hide-mobile-menu'}>
           <li><ScrollLink to='hero' smooth={true} offset={0} duration={500} >Accueil</ScrollLink></li>
           <li><ScrollLink to='programs' smooth={true} offset={-260} duration={500} >Programmes</ScrollLink></li>
@@ -30,7 +31,7 @@ const Navbar = () => {
           <li><ScrollLink to='contact' smooth={true} offset={-260} duration={500} className='btn'>Contactez-nous</ScrollLink></li>
           <li><RouterLink to='/admin' className='portail'><img src={admin32} alt="Portail Admin" /></RouterLink></li>
         </ul>
-        <img src={menu_icon} alt="" className='menu-icon' onClick={toggleMenu}/>
+        <div className='menu-icon' ><MenuIcon onClick={toggleMenu}/></div>
     </nav>
   )
 }

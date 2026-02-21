@@ -22,6 +22,7 @@
     "@react-pdf/renderer": "^4.3.2",
     "dayjs": "^1.11.19",
     "file-saver": "^2.0.5",
+    "framer-motion": "^12.34.3",
     "html-docx-js": "^0.1.0",
     "html2pdf.js": "^0.14.0",
     "react": "^19.2.3",

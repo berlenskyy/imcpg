@@ -12,7 +12,6 @@ import Footer from '../Components/Footer/Footer.jsx'
 import VideoPlayer from '../Components/VideoPlayer/VideoPlayer.jsx'
 import ReleveController from '../Components/Releve/ReleveController.jsx'
 
-
 const Home = () => {
   const [playState, setPlayState] = useState(false);
   return (
@@ -29,9 +28,10 @@ const Home = () => {
         <Testimonials/>
         <Title title='Get In Touch' subtitle='Contactez-Nous'/>
         <Contact/>
-        <Footer/>
+       
         <VideoPlayer playState={playState} setPlayState={setPlayState}/>
       </div>
+      <Footer/>
     </div>
   )
 }

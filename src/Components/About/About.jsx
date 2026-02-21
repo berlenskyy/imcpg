@@ -20,19 +20,20 @@ const About = ({setPlayState}) => {
                 Notre programme éducatif, soigneusement conçu, aide les élèves 
                 à progresser étape par étape, du préscolaire jusqu'au secondaire.
             </p>
-            <p>
-                Nous mettons l’accent sur :
+            <div>
+                <p>Nous mettons l’accent sur :</p>
                 <ul>
                     <li>L’innovation pédagogique</li>
                     <li>L’apprentissage actif et pratique</li>
                     <li>Un accompagnement personnalisé</li>
                     <li>Un environnement sain et sécurisé</li>
                 </ul>
-
-                Nous guidons les élèves pour qu’ils deviennent curieux, confiants, 
-                autonomes et prêts à relever les défis futurs – que ce soit en 
-                classe, dans la société ou dans leur vie personnelle.
-            </p>
+                <p>
+                    Nous guidons les élèves pour qu’ils deviennent curieux, confiants, 
+                    autonomes et prêts à relever les défis futurs – que ce soit en 
+                    classe, dans la société ou dans leur vie personnelle.
+                </p>
+            </div>
             <p>
                 Que votre enfant commence en maternelle, en primaire ou en secondaire, 
                 notre école propose un parcours complet qui favorise la réussite, le 

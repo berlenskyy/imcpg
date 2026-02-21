@@ -5,6 +5,10 @@ import mail_icon from '../../assets/mail-icon.png'
 import phone_icon from '../../assets/phone-icon.png'
 import location_icon from '../../assets/location-icon.png'
 import white_arrow from '../../assets/white_arrow.png'
+import MessageIcon from '@mui/icons-material/Message'
+import EmailIcon from '@mui/icons-material/Email'
+import PhoneIcon from '@mui/icons-material/Phone';
+import LocationOnIcon from '@mui/icons-material/LocationOn'
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
@@ -35,7 +39,7 @@ const Contact = () => {
   return (
     <div className='contact'>
        <div className="contact-col">
-            <h3>Envoyez-nous un message <img src={msg_icon} alt="" /> </h3>
+            <h3><span>Envoyez-nous un message </span><MessageIcon /> </h3>
             <p>
                 N’hésitez pas à nous écrire via le formulaire de contact ou 
                 à consulter nos coordonnées ci-dessous. Vos retours, questions 
@@ -43,9 +47,9 @@ const Contact = () => {
                 à offrir un service exceptionnel à notre communauté scolaire.
             </p>
             <ul>
-                <li> <img src={mail_icon} alt="" /> imcpg.edu@gmail.com</li>
-                <li> <img src={phone_icon} alt="" /> +509 44 24 00 39</li>
-                <li> <img src={location_icon} alt="" /> 118, Boulevard Jean Jacques Dessalines, Verrettes, Haiti</li>
+                <li> <EmailIcon /> imcpg.edu@gmail.com</li>
+                <li> <PhoneIcon /> +509 44 24 00 39</li>
+                <li> <LocationOnIcon /> 118, Boulevard Jean Jacques Dessalines, Verrettes, Haiti</li>
             </ul>
         </div> 
        <div className="contact-col">
