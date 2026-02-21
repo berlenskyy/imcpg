@@ -1,5 +1,7 @@
 
-
+#root{
+  width: 100%;
+}
 
 .admin-container{
   /* position: fixed; */
@@ -7,10 +9,11 @@
   background-color: gray;
   display: flex;
   /* align-items:baseline; */
-  width: 100%;
+  width: inherit;
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow:hidden;
   
 }
  .admin-container img{

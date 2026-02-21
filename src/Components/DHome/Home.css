@@ -6,6 +6,7 @@
 }
 .dHomeContainer .rightPart{
     flex: 1;
+    padding: 6px 2px 10px 2px;
 }
 /* ---------------LINE 1*/
 .line1 ,.line2{
@@ -20,9 +21,11 @@
     flex: 1;
     border: 1px solid green;
     border-radius: 9px;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: white;
+    /* background-color: whitesmoke; */
     padding: 10px 5px 5px 15px; 
-    box-shadow: 2px 2px 6px 0.5px rgba(0, 0, 0, 0.905);
+    box-shadow: 2px 2px 6px 0.5px whitesmoke;
     margin: 0 4px 0 0;
 }
 .cardTop{
@@ -34,6 +37,7 @@
 .cardTop span:first-child{
     font-size: 0.7em;
     background-color: #d1f909;
+    color: black;
     padding: 3px 5px;
     border-radius: 20% 20% 30% 20%;
 }
@@ -42,6 +46,7 @@
     top: -10px;
     font-weight: bolder;
     margin: 0 5px 0 0;
+    cursor:wait;
 }
 .cardContainer h3{
     font-size: 0.8em;
@@ -86,3 +91,109 @@
     flex: 2;
 }
 /* ---------------LINE 3*/
+
+.componentWrapper{
+  /* flex: 1; */
+    /* position: relative; */
+    background-color: rgba(0, 0, 0, 0.658);
+    /* padding: 10px 5px 12px 12px; */
+    padding: 0;
+    border-radius: 15px 15px 0 0;
+    margin-right: 5px;
+    box-shadow: 0.5px 1px 6px 1px whitesmoke;
+    color: aliceblue;
+
+} 
+
+/* My Event Css*/
+.eventWrapper{
+    padding: 10px 10px;
+    border-radius: 0;
+    box-shadow: -4px 0px 4px -3.5px;
+}
+.eventWrapper .cardTop{
+    margin-bottom: 18px;
+}
+.eventWrapper .cardTop h2{
+    font-size: medium;
+    text-transform: capitalize;
+}
+.titlenDate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.titlenDate h2{
+    font-size: smaller;
+    font-weight: 600;
+}
+.titlenDate span{
+    font-size: x-small;
+    font-weight: 100;
+}
+.event{
+    border-top: 2px solid rgba(255, 255, 255, 0.06);
+    padding: 10px 5px;
+    margin: 6px 0 0 0;
+
+}
+.event p{
+    font-size: smaller;
+    font-weight: 100;
+}
+
+/* ----------media queries------------- */
+@media (max-width: 810px){
+    .dHomeContainer{
+    display: flex;
+    flex-direction: column;
+}
+.dHomeContainer .rightPart{
+    display: flex;
+}
+.eventWrapper{
+    /* flex: 2; */
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 10px 5px 12px 12px;
+    border-radius: 15px 15px 0 0;
+    margin-left: 10px;
+    box-shadow: 0.5px 1px 6px 1px whitesmoke;
+    color: aliceblue;
+}
+}
+
+
+/* ----------media queries------------- */
+@media (max-width: 748px){
+    /* .dHomeContainer{
+    display: flex;
+    flex-direction: column;
+} */
+.dHomeContainer .rightPart{
+    display: flex;
+}
+.eventWrapper{
+    /* flex: 2; */
+    background-color: rgba(0, 0, 0, 0.658);
+    padding: 10px 5px 12px 12px;
+    border-radius: 15px 15px 0 0;
+    margin-left: 10px;
+    box-shadow: 0.5px 1px 6px 1px whitesmoke;
+    color: aliceblue;
+}
+.line2{
+    display: flex;
+    flex-direction: column;
+}
+.radial{
+    /* padding: 0; */
+    margin: 0;
+    /* overflow: hidden; */
+}
+.recharts-wrapper{
+    padding: 0;
+    margin: 0;
+    width: 450px;
+    height: 450px;
+}
+}
