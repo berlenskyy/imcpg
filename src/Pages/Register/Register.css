@@ -1,0 +1,524 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Jost', sans-serif;
+    background: #0e1117;
+}
+
+.rp-root {
+    min-height: 100vh;
+    background: #0e1117;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ambient background blobs */
+.rp-root::before {
+    content: '';
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 179, 237, 0.06) 0%, transparent 70%);
+    top: -200px;
+    right: -200px;
+    pointer-events: none;
+}
+
+.rp-root::after {
+    content: '';
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(246, 173, 85, 0.05) 0%, transparent 70%);
+    bottom: -150px;
+    left: -150px;
+    pointer-events: none;
+}
+
+/* ── Card ── */
+.rp-card {
+    width: 100%;
+    max-width: 600px;
+    background: #161b27;
+    border: 1px solid #1e2535;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    animation: fadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Header strip ── */
+.rp-header {
+    background: linear-gradient(135deg, #1a2744 0%, #0e1117 100%);
+    padding: 36px 40px 32px;
+    border-bottom: 1px solid #1e2535;
+    position: relative;
+    overflow: hidden;
+}
+
+.rp-header::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(99, 179, 237, 0.1);
+}
+
+.rp-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.rp-brand-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(99, 179, 237, 0.1);
+    border: 1px solid rgba(99, 179, 237, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #63b3ed;
+}
+
+.rp-brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+.rp-brand-sub {
+    font-size: 0.68rem;
+    color: rgba(255, 255, 255, 0.35);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+}
+
+.rp-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #fff;
+    line-height: 1.2;
+}
+
+.rp-header h1 em {
+    font-style: italic;
+    color: #63b3ed;
+}
+
+.rp-header p {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* ── Form body ── */
+.rp-body {
+    padding: 32px 40px 36px;
+}
+
+/* ── Step indicator ── */
+.rp-steps {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin-bottom: 32px;
+}
+
+.rp-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.rp-step-dot {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid #2a3347;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #4a5568;
+    background: #161b27;
+    transition: all 0.3s;
+    flex-shrink: 0;
+}
+
+.rp-step.active .rp-step-dot {
+    border-color: #63b3ed;
+    color: #63b3ed;
+    background: rgba(99, 179, 237, 0.1);
+}
+
+.rp-step.done .rp-step-dot {
+    border-color: #48bb78;
+    background: rgba(72, 187, 120, 0.1);
+    color: #48bb78;
+}
+
+.rp-step-label {
+    font-size: 0.72rem;
+    color: #4a5568;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.rp-step.active .rp-step-label {
+    color: #63b3ed;
+}
+
+.rp-step.done .rp-step-label {
+    color: #48bb78;
+}
+
+.rp-step-line {
+    flex: 1;
+    height: 1px;
+    background: #2a3347;
+    margin: 0 8px;
+    max-width: 40px;
+}
+
+/* ── Grid ── */
+.rp-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.rp-grid-full {
+    grid-column: 1 / -1;
+}
+
+/* ── Field ── */
+.rp-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.rp-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #8892a4;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rp-input-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.rp-icon {
+    position: absolute;
+    left: 13px;
+    color: #4a5568;
+    pointer-events: none;
+    display: flex;
+    transition: color 0.2s;
+}
+
+.rp-input {
+    width: 100%;
+    padding: 11px 13px 11px 40px;
+    background: #0e1117;
+    border: 1.5px solid #2a3347;
+    border-radius: 9px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.rp-input::placeholder {
+    color: #3a4455;
+}
+
+.rp-input:focus {
+    border-color: #63b3ed;
+    box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.1);
+}
+
+.rp-input:focus~.rp-icon,
+.rp-input-wrap:focus-within .rp-icon {
+    color: #63b3ed;
+}
+
+.rp-input.error {
+    border-color: #fc8181;
+    box-shadow: 0 0 0 3px rgba(252, 129, 129, 0.1);
+}
+
+.rp-eye {
+    position: absolute;
+    right: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4a5568;
+    display: flex;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.rp-eye:hover {
+    color: #e2e8f0;
+}
+
+.rp-error-msg {
+    font-size: 0.73rem;
+    color: #fc8181;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    animation: errIn 0.2s ease;
+}
+
+@keyframes errIn {
+    from {
+        opacity: 0;
+        transform: translateY(-3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Role selector ── */
+.rp-roles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.rp-role-btn {
+    padding: 10px 6px;
+    background: #0e1117;
+    border: 1.5px solid #2a3347;
+    border-radius: 9px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s;
+    color: #4a5568;
+}
+
+.rp-role-btn:hover {
+    border-color: #63b3ed;
+    color: #63b3ed;
+}
+
+.rp-role-btn.selected {
+    border-color: #63b3ed;
+    background: rgba(99, 179, 237, 0.08);
+    color: #63b3ed;
+}
+
+.rp-role-emoji {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.rp-role-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* ── Password strength ── */
+.rp-strength {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.rp-strength-bars {
+    display: flex;
+    gap: 4px;
+}
+
+.rp-strength-bar {
+    flex: 1;
+    height: 3px;
+    border-radius: 2px;
+    background: #2a3347;
+    transition: background 0.3s;
+}
+
+.rp-strength-text {
+    font-size: 0.7rem;
+    color: #4a5568;
+}
+
+/* ── Password match indicator ── */
+.rp-match {
+    font-size: 0.72rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 4px;
+}
+
+/* ── Divider ── */
+.rp-divider {
+    height: 1px;
+    background: #1e2535;
+    margin: 24px 0;
+}
+
+/* ── Submit ── */
+.rp-submit {
+    width: 100%;
+    padding: 13px;
+    background: linear-gradient(135deg, #2b6cb0, #1a2744);
+    color: #fff;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s;
+    margin-top: 8px;
+}
+
+.rp-submit:hover:not(:disabled) {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(43, 108, 176, 0.3);
+}
+
+.rp-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.rp-spinner {
+    width: 17px;
+    height: 17px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Banners ── */
+.rp-banner {
+    padding: 12px 16px;
+    border-radius: 9px;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    animation: errIn 0.25s ease;
+    line-height: 1.5;
+}
+
+.rp-banner.error {
+    background: rgba(252, 129, 129, 0.08);
+    border: 1px solid rgba(252, 129, 129, 0.2);
+    color: #fc8181;
+}
+
+.rp-banner.success {
+    background: rgba(72, 187, 120, 0.08);
+    border: 1px solid rgba(72, 187, 120, 0.2);
+    color: #68d391;
+}
+
+/* ── Footer ── */
+.rp-footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 0.82rem;
+    color: #4a5568;
+}
+
+.rp-footer a {
+    color: #63b3ed;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.rp-footer a:hover {
+    border-bottom-color: #63b3ed;
+}
+
+@media (max-width: 520px) {
+    .rp-card {
+        border-radius: 0;
+    }
+
+    .rp-header,
+    .rp-body {
+        padding: 24px 20px;
+    }
+
+    .rp-grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .rp-roles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

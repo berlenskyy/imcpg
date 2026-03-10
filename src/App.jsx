@@ -13,6 +13,7 @@ import New from './Components/pages/New.jsx'
 import LoginPage from './Components/pages/Login/LoginPage.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
 import ProtectedRoute from './routes/ProtectedRoute.jsx'
+import RegisterPage from './Pages/Register/Register.jsx'
 const App = () => {
   return (
 
@@ -54,6 +55,7 @@ const App = () => {
         <Route path="/accueil" element={<Home />} />
         <Route path="/programme" element={<Programs />} />
         <Route path="/apropos" element={<About />} />
+        <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
 
         {/* ── Routes admin protégées ── */}
@@ -96,7 +98,7 @@ const App = () => {
           path="/unauthorized"
           element={
             <div style={{ textAlign: 'center', padding: '80px 20px' }}>
-              <h1 style={{ fontSize: '3rem' }}>403</h1>
+              <h1 style={{ fontSize: '3rem' }}>IMCPG <br/>403</h1>
               <p>Vous n'avez pas accès à cette page.</p>
               <a href="/login">Retour à la connexion</a>
             </div>
