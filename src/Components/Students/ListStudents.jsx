@@ -5,6 +5,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import BulletinCP from "../Releve/Bulletin"; 
 import { useState } from "react";
 import { GeneratePDF } from "../Releve/GeneratePDF";
+import { Link } from "react-router-dom";
 
 const ListStudents = () => {
     
@@ -49,7 +50,9 @@ const ListStudents = () => {
       <div className="listStudentsContainer">
         <div className="listHeader">
           <h2>Liste des élèves</h2>
-          <button className="addButton">Ajouter un élève</button>
+          <Link to="/admin/students/new">
+            <button className="addButton">Ajouter un élève</button>
+          </Link>
         </div>
         <table className="studentsTable">
           <thead>

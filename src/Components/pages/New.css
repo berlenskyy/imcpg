@@ -1,0 +1,92 @@
+.new {
+  width: 100%;
+  display: flex;
+}
+
+.new .newContainer {
+  flex: 6;
+}
+.new .newContainer .top,
+.new .newContainer .bottom {
+  /* 
+            display: flex; 
+            align-items: center; 
+            justify-content: space-between; 
+        */
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+}
+
+.top h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+.bottom h1 {
+  color: lightgray;
+  font-size: 20px;
+  font-weight: 500;
+}
+.bottom .left {
+  flex: 1;
+  text-align: center;
+}
+.bottom .left img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.bottom .right {
+  flex: 2;
+}
+.bottom .right form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+
+}
+.bottom .right form .formInput {
+  width: 40%;
+
+}
+
+.bottom .right form .formInput label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #dedede;
+}
+
+.bottom .right form .formInput label .icon {
+  /* font-size: 18px; */
+  cursor: pointer;
+}
+
+.bottom .right form .formInput input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid white;
+  color: white;
+  outline: none;
+}
+.bottom .right form .formInput input::placeholder {
+  color: #dedede69;
+}
+.bottom .right form button {
+  width: 150px;
+  padding: 10px;
+  border: none;
+  background-color: #000000bc;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}

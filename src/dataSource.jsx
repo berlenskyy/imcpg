@@ -93,3 +93,63 @@ export const radialBarChartDATA = [
     {name: 'Girls', x: 1134, fill: "yellow"},
 
 ]
+
+export const studentInputs = [
+    // {
+    //     id: 1,
+    //     label: 'Nom Utilisateur',
+    //     type: 'text',
+    //     placeholder: 'johnDoe'
+    // },
+    {
+        id: 2,
+        label: 'Numéro d\'Identification Scolaire Unique',
+        type: 'text',
+        placeholder: 'JODO20201709050001',
+        name: 'ninu'
+    },
+    {
+        id: 3,
+        label: 'Nom',
+        type: 'text',
+        placeholder: 'DOE',
+        name: 'lastname'
+        
+    },
+    {   
+        
+        id: 4,        
+        label: 'Prénom',
+        type: 'text',
+        placeholder: 'John' ,
+        name: 'firstname'
+    },
+    {
+        id: 5,
+        label: 'Date de Naissance',
+        type: 'date',
+        placeholder: '27-09-1990',
+        name: 'birthdate'
+    },
+    {
+        id: 6,
+        label: 'Phone',
+        type: 'tel',
+        placeholder: '+509 123 456 78',
+        name: 'phone_number'
+    },
+    {
+        id: 7,
+        label: 'Addresse',
+        type: 'text',
+        placeholder: '123 Blv JJ Dessalines',
+        name: 'address'
+    },
+    {
+        id: 8,
+        label: 'Pays',
+        type: 'text',
+        placeholder: 'HAITI',
+        name: 'country'
+    }
+];

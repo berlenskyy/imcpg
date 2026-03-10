@@ -2,10 +2,10 @@ import React from 'react'
 import AdminPanel from './AdminPanel'
 import Navbar from '../Navbar/Navbar'
 
-const AdminPage = () => {
+const AdminPage = ({children}) => {
   return (
   
-      <AdminPanel />
+      <AdminPanel children={children} />
     
   )
 }
