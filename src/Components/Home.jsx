@@ -9,8 +9,7 @@ import Campus from '../Components/Campus/Campus.jsx'
 import Testimonials from '../Components/Testimonials/Testimonials.jsx'
 import Contact from '../Components/Contact/Contact.jsx'
 import Footer from '../Components/Footer/Footer.jsx'
-import VideoPlayer from '../Components/VideoPlayer/VideoPlayer.jsx'
-import ReleveController from '../Components/Releve/ReleveController.jsx'
+import VideoPlayer from '../Components/VideoPlayer/VideoPlayer.jsx' 
 
 const Home = () => {
   const [playState, setPlayState] = useState(false);

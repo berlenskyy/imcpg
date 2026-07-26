@@ -9,6 +9,7 @@ import MessageIcon from '@mui/icons-material/Message'
 import EmailIcon from '@mui/icons-material/Email'
 import PhoneIcon from '@mui/icons-material/Phone';
 import LocationOnIcon from '@mui/icons-material/LocationOn'
+import { schoolTest } from '../../dataSource'
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
@@ -47,9 +48,9 @@ const Contact = () => {
                 à offrir un service exceptionnel à notre communauté scolaire.
             </p>
             <ul>
-                <li> <EmailIcon /> imcpg.edu@gmail.com</li>
-                <li> <PhoneIcon /> +509 44 24 00 39</li>
-                <li> <LocationOnIcon /> 118, Boulevard Jean Jacques Dessalines, Verrettes, Haiti</li>
+                <li> <EmailIcon /> {schoolTest.email}</li>
+                <li> <PhoneIcon /> {schoolTest.telephone}</li>
+                <li> <LocationOnIcon /> {schoolTest.adress.no+' '+schoolTest.adress.street+' '+schoolTest.adress.city} </li>
             </ul>
         </div> 
        <div className="contact-col">

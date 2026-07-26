@@ -10,20 +10,7 @@ const SideBar = () => {
         <hr />
         <div className="center">
           <ul>
-            {
-            /* <li onClick={handleClickHome}>accueil</li>
-            <li onClick={handleClickWebsite}>Direction</li>
-            <li onClick={handleClickReleve}>Relevé(s)</li>
-            <li onClick={handleClickStudents}>Élèves</li>
-            <li onClick={handleClickWebsite}>Professeur</li>
-            <li onClick={handleClickWebsite}>Parents</li>
-            <li onClick={handleClickWebsite}>Matières</li>
-            <li onClick={handleClickWebsite}>Classe</li>
-            <li onClick={handleClickWebsite}>Leçon(s)</li>
-            <li onClick={handleClickWebsite}>Devoir(s)</li>
-            <li onClick={handleClickWebsite}>Exam(s)</li>
-            <li onClick={handleClickWebsite}>Classe</li> */
-            }
+            
             <Link to="/admin/"><li >accueil</li></Link>
             
             <Link to="/admin/direction"><li >Direction</li></Link>

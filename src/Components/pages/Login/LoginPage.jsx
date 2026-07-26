@@ -4,7 +4,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import "./LoginPage.css";
+import { schoolTest } from "../../../dataSource";
 import * as Yup from "yup";
+//import env from "../config/env";
 
 // ── Validation schema ──────────────────────────────────────────────────────────
 const schema = Yup.object().shape({
@@ -113,7 +115,7 @@ const LoginPage = () => {
           <div className="lp-brand">
             <div className="lp-brand-icon"><SchoolIcon /></div>
             <div className="lp-brand-text">
-              <strong>Institution Mixte Cérélus Pierre Glaude</strong>
+              <strong>{schoolTest.name}</strong>
               <span>Portail Académique</span>
             </div>
           </div>
@@ -244,11 +246,14 @@ const LoginPage = () => {
                   "Se connecter"
                 )}
               </button>
-
+              <p className="rp-footer">
+               Vous n'avez pas encore un compte ?{" "}
+              <a href="/register">S'inscrire</a>
+            </p>
             </form>
 
             <p className="lp-footer">
-              © {new Date().getFullYear()} Institution Mixte Cérélus Pierre Glaude — Tous droits réservés
+              © {new Date().getFullYear()} {schoolTest.name} — Tous droits réservés
             </p>
           </div>
         </div>

@@ -5,6 +5,7 @@ import { useForm , useFieldArray, set} from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";  
 import { get } from "react-scroll/modules/mixins/scroller";
+import { schoolTest } from "../../dataSource";
 
 // Schéma de validation
 const schema = Yup.object().shape({
@@ -158,7 +159,7 @@ const onSubmit = (data) => {
   //******* User Rendering ******** */
   return (
     <div className="dForm">
-      <h1>Gestion de Relevés de Notes IMCPG</h1>
+      <h1>Gestion de Relevés de Notes {schoolTest.pseudo}</h1>
       <p></p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="formElements">

@@ -1,4 +1,6 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8080";
+import env from "../config/env";
+
+const BASE_URL = env.apiUrl;
 
 export const loginUser = async (username, password) => {
   const response = await fetch(`${BASE_URL}/api/auth/login`, {
@@ -8,7 +10,7 @@ export const loginUser = async (username, password) => {
   });
 
   const data = await response.json();
-
+  
   if (!response.ok) {
     throw new Error(data.message || "Erreur de connexion");
   }

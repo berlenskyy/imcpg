@@ -17,13 +17,29 @@ export const school = {
     email:'imcpg.edu@gmail.com'
    
 }
+export const schoolTest = {
+    name: 'Institution Mixte Essai Test Ecole',
+    adress:{no: '01', street:'BOULEVARD JEAN JACQUES DESSALINES', city: 'VERRETTES', country:'HAÏTI, (W.I)'}, 
+    dept:'Artibonite',
+    section: ['Garderie Éducative','Kindergarden','Fondamentale', 'Secondaire'],
+    email:'email@ecole.com',
+    telephone: '+509 44 24 00 39',
+    pseudo:'IMETE'
+   
+}
 
 
-export const students = [
+export const studentss = [
     {id: 1, firstname:'Kerenne Mairah', lastname:'Jules', class:'CP', year: '2025 - 2026'},
     {id: 2, firstname:'Ketsia Naima', lastname:'Jules', class:'CM2', year: '2025 - 2026'},
     {id: 3, firstname:'Medjina', lastname:'Thelemaque', class:'CE2', year: '2025 - 2026'},
     {id: 4, firstname:'Silfrida', lastname:'Méronvil', class:'CE1', year: '2025 - 2026'}
+]
+export const students = [
+    {id: 1, firstname:'Jolie Prénom', lastname:'Nom', class:'CP', year: '2025 - 2026'},
+    {id: 2, firstname:'Magnifique', lastname:'Fervent', class:'CM2', year: '2025 - 2026'},
+    {id: 3, firstname:'Saturne', lastname:'Trouillot', class:'CE2', year: '2025 - 2026'},
+    {id: 4, firstname:'Jupiter', lastname:'Perez', class:'CE1', year: '2025 - 2026'}
 ]
 export const results = [
     {

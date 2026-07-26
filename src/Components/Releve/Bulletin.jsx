@@ -1,21 +1,21 @@
 import "./Releve.css";
 import "./Bulletin.css";
 import logo1 from "./../../assets/logo.png";
-import {school, results} from './../../dataSource.jsx'
+import {schoolTest, results} from './../../dataSource.jsx'
 
-const DocHeader =({school})=>
+const DocHeader =({schoolTest})=>
   <>
     <div className="headerWrapper">
       <img src={logo1} alt="" className="logo" />
       <div>
-        <p className="nomEc">{school.name}</p>
-        <p className="ssection">{'Section '}{school.section[2]}</p>
+        <p className="nomEc">{schoolTest.name}</p>
+        <p className="ssection">{'Section '}{schoolTest.section[2]}</p>
         <p className="aaddress">
-          {school.adress.no+', '+school.adress.street+', '+school.adress.city+', '+school.adress.country}
+          {schoolTest.adress.no+', '+schoolTest.adress.street+', '+schoolTest.adress.city+', '+schoolTest.adress.country}
         </p>
         <p className="ccity"></p>
         <p className="ddept">DÉPARTEMENT DE L’ARTIBONITE</p>
-        <p className="eemail">COURRIEL : {school.email}</p>
+        <p className="eemail">COURRIEL : {schoolTest.email}</p>
       </div>
       <img src={logo1} alt="" className="logo" />
     </div>
@@ -25,7 +25,7 @@ const DocHeader =({school})=>
 
 const Periode = ({ numero, student }) => (
   <div id ="page" className="periode"> 
-    <DocHeader school={school}/>
+    <DocHeader schoolTest={schoolTest}/>
     <div className="infos">
       <p className="cp">{student.class}</p>
       <p>{student.year}</p>

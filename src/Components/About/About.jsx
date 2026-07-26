@@ -2,6 +2,7 @@ import React from 'react'
 import './About.css';
 import about_img from '../../assets/about_img.png';
 import play_icon from '../../assets/play_icon.png';
+import { schoolTest } from '../../dataSource';
 
 
 const About = ({setPlayState}) => {
@@ -12,7 +13,7 @@ const About = ({setPlayState}) => {
             <img src={play_icon} alt="" className='play_icon' onClick={()=>{ setPlayState(true)}}/>
         </div>
         <div className="about-right">
-            <h3>À Propos De L’IMCPG</h3>
+            <h3>À Propos De L’{schoolTest.pseudo}</h3>
             <h2>Former Les Citoyens Responsables De Demain, Dès Aujourd’hui</h2>
             <p>
                 Rejoignez une communauté scolaire engagée où chaque enfant est 

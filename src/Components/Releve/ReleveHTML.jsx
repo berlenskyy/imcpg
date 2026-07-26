@@ -1,11 +1,12 @@
 import React from 'react'
 import logo1 from './../../assets/logo.png'
 import './Releve.css'
+import { schoolTest } from '../../dataSource'
 const ReleveHTML = ({data}) => {
     const infoImcpg = {
-        'nomEcole' : 'Institution Mixte Cérélus Pierre Glaude',
-        'email':'imcpg.edu@gmail.com',
-        'adresse1':'118, Boulevard Jean Jacques Dessalines',
+        'nomEcole' : `${schoolTest.name}`,
+        'email':`${schoolTest.email}`,
+        'adresse1':'01, Boulevard Jean Jacques Dessalines',
         'adresse2':'Verrettes, Dpt Artibonite'
     }
 
@@ -26,7 +27,7 @@ const ReleveHTML = ({data}) => {
         <h2 className="title">RELEVÉ DES NOTES</h2>
 
         <p className="text">
-            L’Institution Mixte Cérélus Pierre Glaude atteste et certifie par la présente
+            L’{schoolTest.name} atteste et certifie par la présente
             que l’élève <strong>{data.student.firstname} {data.student.lastname}</strong> en classe de{" "}
             <strong>{data.student.level}</strong> a obtenu les notes suivantes pour
             l’année scolaire <strong>{data.student.year}</strong>.

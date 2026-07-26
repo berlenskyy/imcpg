@@ -5,8 +5,8 @@ import Navbar from '../Navbar/Navbar'
 const AdminPage = ({children}) => {
   return (
   
-      <AdminPanel children={children} />
-    
+      <AdminPanel  />
+    // children={children}
   )
 }
 

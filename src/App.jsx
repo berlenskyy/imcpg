@@ -14,6 +14,8 @@ import LoginPage from './Components/pages/Login/LoginPage.jsx'
 import { AuthProvider } from './context/AuthContext.jsx'
 import ProtectedRoute from './routes/ProtectedRoute.jsx'
 import RegisterPage from './Pages/Register/Register.jsx'
+import StudentPage from './Pages/Students/StudentPage.jsx'
+import DashboardHome from './Components/DHome/Home.jsx'
 const App = () => {
   return (
 
@@ -68,7 +70,7 @@ const App = () => {
           }
         >
           {/* Index → tableau de bord par défaut */}
-          <Route index element={<DefaultBody />} />
+          <Route index element={<DashboardHome />} />
 
           {/* Élèves */}
           <Route path="students">
@@ -98,7 +100,7 @@ const App = () => {
           path="/unauthorized"
           element={
             <div style={{ textAlign: 'center', padding: '80px 20px' }}>
-              <h1 style={{ fontSize: '3rem' }}>IMCPG <br/>403</h1>
+              <h1 style={{ fontSize: '3rem' }}>IMCPG <br/> Erreur 403</h1>
               <p>Vous n'avez pas accès à cette page.</p>
               <a href="/login">Retour à la connexion</a>
             </div>

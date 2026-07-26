@@ -3,8 +3,9 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
-
-
+import env from  '../../config/env';
+import { schoolTest } from '../../dataSource';
+const BASE_URL = env.apiUrl;
 // ── Validation ────────────────────────────────────────────────────────────────
 const schema = Yup.object().shape({
   firstName: Yup.string()
@@ -127,7 +128,7 @@ const RegisterPage = () => {
     setLoading(true);
 
     try {
-      const response = await fetch("/api/auth/register", {
+      const response = await fetch(`${BASE_URL}/api/auth/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -138,9 +139,9 @@ const RegisterPage = () => {
           lastName:  data.lastName,
           email:     data.email,
         }),
-      });
+      }); 
 
-      const result = await response.json();
+      const result = await response.json(); 
 
       if (!response.ok) {
         setServerError(result.message || "Une erreur est survenue.");
@@ -172,7 +173,7 @@ const RegisterPage = () => {
                 <Icon {...icons.school} />
               </div>
               <div>
-                <span className="rp-brand-name">Institution Mixte Cérélus Pierre Glaude</span>
+                <span className="rp-brand-name">{schoolTest.name}</span>
                 <span className="rp-brand-sub">Portail Académique</span>
               </div>
             </div>
@@ -478,3 +479,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+

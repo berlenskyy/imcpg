@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { schoolTest } from '../../dataSource';
 const Footer = () => {
  const year = new Date().getFullYear();
 
@@ -46,7 +47,7 @@ const Footer = () => {
           </div>
         </div>
 
-      <p>&copy; {year} IMCPG - Tous droits réservés.</p>
+      <p>&copy; {year} {schoolTest.pseudo} - Tous droits réservés.</p>
       
     </div>
   )
